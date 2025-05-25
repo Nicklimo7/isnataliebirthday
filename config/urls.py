@@ -18,10 +18,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
+from datetime import datetime, timezone
+
+now = datetime.now(timezone.utc)
 
 
 def home(request):
-    return HttpResponse("Django on Render is working!!!!")
+    if now.month == 6 and now.year == 22:
+        return HttpResponse("YES")
+    else:
+        return HttpResponse("No")
 
 
 urlpatterns = [
