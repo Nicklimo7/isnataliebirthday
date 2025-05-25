@@ -1,0 +1,4 @@
+# ignore virtual environment and Python build artefacts
+.venv/
+__pycache__/
+*.pyc
